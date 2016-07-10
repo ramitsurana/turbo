@@ -27,8 +27,8 @@ var cfgFile string
 
 var RootCmd = &cobra.Command{
 	Use:   "Turbo",
-	Short: "Optimize your docker enviorment with ease",
-	Long: `Optimize your docker enviorment with ease`,
+	Short: "Powerful CLI for Docker",
+	Long: `Powerful CLI for Docker`,
 }
 
 

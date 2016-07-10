@@ -23,8 +23,8 @@ import (
 
 var kickstartCmd = &cobra.Command{
 	Use:   "kickstart",
-	Short: "Restarts all your containers in a jiff",
-	Long: `Restarts all your containers in a jiff`,
+	Short: "Restarts all your containers quickly",
+	Long: `Restarts all your containers quickly`,
 	Run: func(cmd *cobra.Command, args []string) {
 		
 		fmt.Println("Your containers are up and running")

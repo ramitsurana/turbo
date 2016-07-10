@@ -21,36 +21,40 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var backupCmd = &cobra.Command{
-	Use:   "backup",
-	Short: "backups all your docker stuff",
-	Long: `backups all your Docker images`,
-	Run: func(cmd *cobra.Command, args []string) {		
-		fmt.Println("checking your info on docker ...")
-		cmd1 := exec.Command("docker","info")
+var rcCmd = &cobra.Command{
+	Use:   "rc",
+	Short: "replicates your containers",
+	Long: `Uses the same image to bring up multiple containers`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Creating 1 st containers ...")
+		cmd1 := exec.Command("docker", "create", "$2")
 		err1 := cmd1.Start()
 		if err1 != nil {
                 	log.Fatal(err1)
-			log.Printf("Unable to get info on docker")
-        	}
-		fmt.Println("Copying data to docker-backup ...")
-		cmd2 := exec.Command("mkdir","-p","$HOME/docker-backup")
+			log.Printf("1 st container has failed ...")
+        	}		
+		fmt.Println("1st container created")
+	
+		fmt.Println("Creating 2 nd containers ...")
+		cmd2 := exec.Command("docker", "create", "$2")
 		err2 := cmd2.Start()
 		if err2 != nil {
                 	log.Fatal(err2)
-			log.Printf("Unable to make docker-backup")
+			log.Printf("2 nd container has failed ...")
         	}		
-		fmt.Println("Copying data to docker-backup ...")		 
-		cmd3 := exec.Command("sudo", "cp","-avr","/var/lib/docker","$HOME/docker-backup")
+		fmt.Println("2nd container created")
+	
+		fmt.Println("Creating 3 rd containers ...")
+		cmd3 := exec.Command("docker", "create", "$2")
 		err3 := cmd3.Start()
 		if err3 != nil {
                 	log.Fatal(err3)
-			log.Printf("Unable to shift data into docker-backup")
-        	}
-		fmt.Println("Operation Successful.You can check the images at $HOME/docker-backup")
+			log.Printf("3 rd container has failed ...")
+        	}		
+		fmt.Println("All the containers are created.Here are there ID's:")
 	},
-}
+}	
 
 func init() {
-	RootCmd.AddCommand(backupCmd)
+	RootCmd.AddCommand(rcCmd)		
 }

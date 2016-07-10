@@ -22,7 +22,7 @@ import (
 )
 
 var cleanCmd = &cobra.Command{
-	Use:   "clean-all",
+	Use:   "clean",
 	Short: "cleans up all your docker images",
 	Long: `clean up your docker images `,
 	Run: func(cmd *cobra.Command, args []string) {

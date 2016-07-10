@@ -21,27 +21,29 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var backupCmd = &cobra.Command{
-	Use:   "backup",
-	Short: "backups all your docker stuff",
-	Long: `backups all your Docker images`,
+var searchCmd = &cobra.Command{
+	Use:   "search",
+	Short: "Search images from registries",
+	Long: `Search command searches for the image
+from various registries and prints the result.Currently using Docker registry,quay.io and gcr.io`,
 	Run: func(cmd *cobra.Command, args []string) {		
-		fmt.Println("checking your info on docker ...")
-		cmd1 := exec.Command("docker","info")
+		fmt.Println("Searching your image via Docker registry")
+		cmd1 := exec.Command("docker","search","$")
 		err1 := cmd1.Start()
+		//Prints the result
 		if err1 != nil {
                 	log.Fatal(err1)
-			log.Printf("Unable to get info on docker")
+			log.Printf("Unable to get info from docker registry")
         	}
-		fmt.Println("Copying data to docker-backup ...")
-		cmd2 := exec.Command("mkdir","-p","$HOME/docker-backup")
+		fmt.Println("Searching your image via Quay.io registry")
+		cmd2 := exec.Command("docker","search","$")
 		err2 := cmd2.Start()
 		if err2 != nil {
                 	log.Fatal(err2)
 			log.Printf("Unable to make docker-backup")
         	}		
-		fmt.Println("Copying data to docker-backup ...")		 
-		cmd3 := exec.Command("sudo", "cp","-avr","/var/lib/docker","$HOME/docker-backup")
+		fmt.Println("Searching your image via Gcr.io registry")		 
+		cmd3 := exec.Command("docker","search","$")
 		err3 := cmd3.Start()
 		if err3 != nil {
                 	log.Fatal(err3)
@@ -52,5 +54,5 @@ var backupCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.AddCommand(backupCmd)
+	RootCmd.AddCommand(searchCmd)
 }

@@ -21,22 +21,22 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var gcCmd = &cobra.Command{
-	Use:   "gc",
-	Short: "wipes off all the stopped containers",
-	Long: `cleans up all the stopped containers`,
+var monitorCmd = &cobra.Command{
+	Use:   "monitor",
+	Short: "To monitor your containers",
+	Long: `It monitors your docker containers`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("")
-		cmd1 := exec.Command("docker", "rm", "$(docker", "ps", "-q", "-f", "status=exited)")
+		fmt.Println("Monitoring images ...")
+		cmd1 := exec.Command("docker", "rmi", "`docker", "images", "-a", "-q`")
 		err1 := cmd1.Start()
 		if err1 != nil {
                 	log.Fatal(err1)
-			log.Printf("Failed to remove containers ...")
+			log.Printf("Monitoring failed ...")
         	}		
-		fmt.Println("All containers wiped")
+		fmt.Println("")
 	},
 }
 
 func init() {
-	RootCmd.AddCommand(gcCmd)			
+	RootCmd.AddCommand(monitorCmd)		
 }
