@@ -6,10 +6,14 @@
 
 Running Docker containers at the speed of light 
 
+Powerful CLI for Docker users
+
 ````
 $ go get github.com/ramitsurana/turbo
-$ turbo
-
+$ cd $GOPATH/src/github.com/ramitsurana/turbo
+$ go run main.go
+$ go build github.com/ramitsurana/turbo
+$ ./turbo
 Welcome to Turbo
 Optimize your docker enviorment with ease
 
@@ -30,6 +34,12 @@ Flags:
 
 Use "Turbo [command] --help" for more information about a command.
 
+````
+
+Adding it to your path :
+
+````
+$ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
 ````
 
 ## Commands
