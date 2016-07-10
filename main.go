@@ -19,7 +19,7 @@ import (
     "fmt"    
 )
 
-func main() {
+func turbo() {
     
 
     fmt.Println("Welcome to Turbo")
