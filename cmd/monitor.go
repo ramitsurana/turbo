@@ -26,14 +26,30 @@ var monitorCmd = &cobra.Command{
 	Short: "To monitor your containers",
 	Long: `It monitors your docker containers`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Monitoring images ...")
-		cmd1 := exec.Command("docker", "rmi", "`docker", "images", "-a", "-q`")
-		err1 := cmd1.Start()
-		if err1 != nil {
-                	log.Fatal(err1)
+		fmt.Println("Checking ...")
+
+		arg0 := "glances"
+                arg1 := "-w"
+                arg2 := "$2"    
+				 		
+                cmd1 := exec.Command(arg2)
+                stdout1, err1 := cmd1.Output()
+
+		if err1 != nil {	 	                            
+		      log.Printf("\nFailed to search via Docker Registry.Please check your Internet connection.")
+		      println(err1.Error())		      		     		      		  
+                      return
+    		}    
+		print(string(stdout1))
+
+		fmt.Println("Starting monitoring ...")
+		cmd2 := exec.Command(arg0, arg1)
+		err2 := cmd2.Start()
+		if err2 != nil {
+                	log.Fatal(err2)
 			log.Printf("Monitoring failed ...")
         	}		
-		fmt.Println("")
+		fmt.Println("You can view the monitor at http://<your-ip>/")
 	},
 }
 

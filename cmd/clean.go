@@ -17,7 +17,10 @@ package cmd
 import (
 	"fmt"
 	"os/exec"
-	"log"	
+	"log"
+	"os"
+	"bufio"
+	"github.com/fatih/color"	
 	"github.com/spf13/cobra"
 )
 
@@ -26,14 +29,22 @@ var cleanCmd = &cobra.Command{
 	Short: "cleans up all your docker images",
 	Long: `clean up your docker images `,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Detecting images ...")
-		cmd1 := exec.Command("docker", "rmi", "`docker", "images", "-a", "-q`")
-		err1 := cmd1.Start()
-		if err1 != nil {
+		fmt.Println("Cleaning images ...\n", color.RedString("WARNING"),": This action will clean up all your Docker images.")
+
+		reader := bufio.NewReader(os.Stdin)
+		fmt.Print("Are you sure you wish to continue (y/n): ")
+		text, _ := reader.ReadString('\n')
+		
+		if text == "y" {
+			fmt.Println("Cleaning images ...")		
+			cmd1 := exec.Command("docker", "rmi", "`docker", "images", "-a", "-q`")
+			err1 := cmd1.Start()
+			if err1 != nil {
                 	log.Fatal(err1)
 			log.Printf("Images removal failed ...")
-        	}		
+        		}		
 		fmt.Println("All images cleaned")
+		}		
 	},
 }
 

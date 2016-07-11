@@ -23,7 +23,7 @@ import (
 
 var kickstartCmd = &cobra.Command{
 	Use:   "kickstart",
-	Short: "Restarts all your containers quickly",
+	Short: "<W.I.P.>Restarts all your containers quickly",
 	Long: `Restarts all your containers quickly`,
 	Run: func(cmd *cobra.Command, args []string) {
 		
@@ -32,16 +32,5 @@ var kickstartCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.AddCommand(kickstartCmd)
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// configCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// configCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-
+	RootCmd.AddCommand(kickstartCmd)	
 }

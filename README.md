@@ -1,30 +1,39 @@
+# Turbo 
 
+Powerful CLI for [Docker][1]
 
 ![turbo1](https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png)
 
-# Turbo
+## Getting Started
 
-Running Docker containers at the speed of light 
+### Prerequisites
 
-Powerful CLI for Docker users
+* Go v1.6
+* Docker v1.11 and above
+
+### Steps to follow
 
 ````
-$ go get github.com/ramitsurana/turbo
+$ go get -v github.com/ramitsurana/turbo
 $ cd $GOPATH/src/github.com/ramitsurana/turbo
 $ go run main.go
 $ go build github.com/ramitsurana/turbo
 $ ./turbo
-Welcome to Turbo
-Optimize your docker enviorment with ease
+Turbo:
+  Powerful CLI Tool for Docker
 
 Usage:
   Turbo [command]
 
 Available Commands:
   backup      backups all your docker stuff
-  clean-all   cleans up all your docker images
-  gc          <W.I.P.> cleans up all the stopped containers
-  kickstart   Restarts all your containers in a jiff
+  clean       cleans up all your docker images
+  clear       wipes off all the stopped containers
+  kickstart   <W.I.P.>Restarts all your containers quickly
+  monitor     To monitor your containers
+  replica     replicates your containers
+  search      Search images from multiple registries
+  ship        ships off all your docker images
   version     prints the current version number of turbo
 
 Flags:
@@ -33,7 +42,6 @@ Flags:
   -t, --toggle          Help message for toggle
 
 Use "Turbo [command] --help" for more information about a command.
-
 ````
 
 Adding it to your path :
@@ -41,32 +49,36 @@ Adding it to your path :
 ````
 $ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
 ````
+## About Turbo
+
+[Turbo][2] is a cool new way to use [docker][1] in a fun and easy way.It uses [docker][1] commands in the backend.Built using Golang.This project is dedicated to docker users who would like to use [docker][1] in a more effective and faster way.
 
 ## Commands
-------------
+
+[Backup](#backup) | [Clean](#clean) | [Version](#version) | [Clean](#clean) | [Kickstart](kickstart)
 
 ### Backup
 
 Backups all your stuff so that you can have a copy in case anything goes wrong.
 
 ````
-$ turbo backup
+$turbo backup
 ````
 
-### Clean-all
+### Clean
 
-Cleans all your docker images 
+Wipes of all your docker images from your system.
 
 ````
-$ turbo clean-all
+$turbo clean
 ````
 
-### Garbage Container
+### Clear
 
 Kills all of your stopped containers.
 
 ````
-$ turbo gc
+$turbo clear
 ````
 
 ### Kickstart 
@@ -74,15 +86,22 @@ $ turbo gc
 Restarts all of your containers.
 
 ````
-$ turbo kickstart
+$turbo kickstart
 ````
 ### Version
 
 Displays info about version of turbo.
 
 ````
-$ turbo version
+$turbo version
 ````
+## Demo
+
+Coming Soon
+
 ## License
 
-Apache License 2.0
+[Apache License 2.0](LICENSE)
+
+[1]: http://docker.com
+[2]: http://ramitsurana.github.io/turbo
