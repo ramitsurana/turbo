@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Turbo by ramitsurana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Turbo</h1>
+      <h2 class="project-tagline">Powerful CLI for Docker</h2>
+      <a href="https://github.com/ramitsurana/turbo" class="btn">View on GitHub</a>
+      <a href="https://github.com/ramitsurana/turbo/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ramitsurana/turbo/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="turbo" class="anchor" href="#turbo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turbo</h1>
+
+<p>Powerful CLI for <a href="http://docker.com">Docker</a></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png" alt="turbo1"></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<h3>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<ul>
+<li>Go v1.6</li>
+<li>Docker v1.11 and above</li>
+</ul>
+
+<h3>
+<a id="steps-to-follow" class="anchor" href="#steps-to-follow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Steps to follow</h3>
+
+<pre><code>$ go get -v github.com/ramitsurana/turbo
+$ cd $GOPATH/src/github.com/ramitsurana/turbo
+$ go run main.go
+$ go build github.com/ramitsurana/turbo
+$ ./turbo
+Turbo:
+  Powerful CLI Tool for Docker
+
+Usage:
+  Turbo [command]
+
+Available Commands:
+  backup      backups all your docker stuff
+  clean       cleans up all your docker images
+  clear       wipes off all the stopped containers
+  kickstart   &lt;W.I.P.&gt;Restarts all your containers quickly
+  monitor     To monitor your containers
+  replica     replicates your containers
+  search      Search images from multiple registries
+  ship        ships off all your docker images
+  version     prints the current version number of turbo
+
+Flags:
+      --config string   config file (default is $HOME/.turbo.yaml)
+  -h, --help            help for Turbo
+  -t, --toggle          Help message for toggle
+
+Use "Turbo [command] --help" for more information about a command.
+</code></pre>
+
+<p>Adding it to your path :</p>
+
+<pre><code>$ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
+</code></pre>
+
+<h2>
+<a id="about-turbo" class="anchor" href="#about-turbo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Turbo</h2>
+
+<p><a href="http://ramitsurana.github.io/turbo">Turbo</a> is a cool new way to use <a href="http://docker.com">docker</a> in a fun and easy way.It uses <a href="http://docker.com">docker</a> commands in the backend.Built using Golang.This project is dedicated to docker users who would like to use <a href="http://docker.com">docker</a> in a more effective and faster way.</p>
+
+<h2>
+<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h2>
+
+<p><a href="#backup">Backup</a> | <a href="#clean">Clean</a> | <a href="#version">Version</a> | <a href="#clean">Clean</a> | <a href="kickstart">Kickstart</a></p>
+
+<h3>
+<a id="backup" class="anchor" href="#backup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Backup</h3>
+
+<p>Backups all your stuff so that you can have a copy in case anything goes wrong.</p>
+
+<pre><code>$turbo backup
+</code></pre>
+
+<h3>
+<a id="clean" class="anchor" href="#clean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clean</h3>
+
+<p>Wipes of all your docker images from your system.</p>
+
+<pre><code>$turbo clean
+</code></pre>
+
+<h3>
+<a id="clear" class="anchor" href="#clear" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clear</h3>
+
+<p>Kills all of your stopped containers.</p>
+
+<pre><code>$turbo clear
+</code></pre>
+
+<h3>
+<a id="kickstart" class="anchor" href="#kickstart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kickstart</h3>
+
+<p>Restarts all of your containers.</p>
+
+<pre><code>$turbo kickstart
+</code></pre>
+
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h3>
+
+<p>Displays info about version of turbo.</p>
+
+<pre><code>$turbo version
+</code></pre>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
+
+<p>Coming Soon</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">Apache License 2.0</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ramitsurana/turbo">Turbo</a> is maintained by <a href="https://github.com/ramitsurana">ramitsurana</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
