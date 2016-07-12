@@ -1,148 +1,260 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Turbo by ramitsurana</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Turbo</h1>
-      <h2 class="project-tagline">Powerful CLI for Docker</h2>
-      <a href="https://github.com/ramitsurana/turbo" class="btn">View on GitHub</a>
-      <a href="https://github.com/ramitsurana/turbo/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/ramitsurana/turbo/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Turbo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-    <section class="main-content">
-      <h1>
-<a id="turbo" class="anchor" href="#turbo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Turbo</h1>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-<p>Powerful CLI for <a href="http://docker.com">Docker</a></p>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.png" alt="" /></span>
+						<h1>Turbo</h1>
+						<p>Powerful command line tool for <a href="https://docker.com" target="_blank">Docker</a><br />
+						Made by <a href="https://twitter.com/ramitsurana" target="_blank">Ramit Surana</a></p>
+<p><!-- Place this tag where you want the button to render. -->
+<a aria-label="Follow @ramitsurana on GitHub" data-count-aria-label="# followers on GitHub" data-count-api="/users/ramitsurana#followers" data-count-href="/ramitsurana/followers" href="https://github.com/ramitsurana" class="github-button">@ramitsurana</a><!-- Place this tag where you want the button to render. -->
+<a aria-label="Fork ramitsurana/turbo on GitHub" data-count-aria-label="# forks on GitHub" data-count-api="/repos/ramitsurana/turbo#forks_count" data-count-href="/ramitsurana/turbo/network" data-icon="octicon-repo-forked" href="https://github.com/ramitsurana/turbo/fork" class="github-button">Fork</a>
+<!-- Place this tag where you want the button to render. -->
+<a aria-label="Star ramitsurana/turbo on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/ramitsurana/turbo#stargazers_count" data-count-href="/ramitsurana/turbo/stargazers" data-icon="octicon-star" href="https://github.com/ramitsurana/turbo" class="github-button">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a aria-label="Fork ramitsurana/turbo on GitHub" data-count-aria-label="# forks on GitHub" data-count-api="/repos/ramitsurana/turbo#forks_count" data-count-href="/ramitsurana/turbo/network" data-icon="octicon-repo-forked" href="https://github.com/ramitsurana/turbo/fork" class="github-button">Fork</a>
+<a href="https://twitter.com/intent/tweet?screen_name=ramitsurana" class="twitter-mention-button" data-show-count="false">Tweet to @ramitsurana</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/ramitsurana" class="twitter-follow-button" data-show-count="false">Follow @ramitsurana</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+					</header>
 
-<p><img src="https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png" alt="turbo1"></p>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Getting Started</a></li>
+							<li><a href="#first">Features</a></li>
+							<li><a href="#second">Statistics</a></li>
+							<li><a href="#cta">Demo</a></li>
+						</ul>
+					</nav>
 
-<h2>
-<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+				<!-- Main -->
+					<div id="main">
 
-<h3>
-<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisites</h3>
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Getiing Started</h2>
+										</header>
+										<p>Follow these commands to get started</p>
+<pre><code>go get -v github.com/ramitsurana/turbo
+cd $GOPATH/src/github.com/ramitsurana/turbo
+go run main.go
+go build github.com/ramitsurana/turbo
+./turbo
 
-<ul>
-<li>Go v1.6</li>
-<li>Docker v1.11 and above</li>
-</ul>
+#For aliasing use
+alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
+</pre></code>
+										<ul class="actions">
+											<li><a href="https://github.com/ramitsurana/turbo" target="_blank" class="button">Learn More</a></li>
+										</ul>
+									</div>
+									<span class="image"><img src="images/logo.png" alt="" /></span>
+								</div>
+							</section>
 
-<h3>
-<a id="steps-to-follow" class="anchor" href="#steps-to-follow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Steps to follow</h3>
+						<!-- First Section -->
+							<section id="first" class="main special">
+								<header class="major">
+									<h2></h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon major style1 fa-heart"></span>
+										<h3>Made with Love</h3>
+										<p>Turbo is built keeping in mind the needs of the community</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-star"></span>
+										<h3>Beautifully Designed</h3>
+										<p>Turbo is designed using the best of options</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-bolt"></span>
+										<h3>Ultra Fast</h3>
+										<p>Turbo is built using Golang which makes it fast to run in your enviorment.</p>
+									</li>
+								</ul>
 
-<pre><code>$ go get -v github.com/ramitsurana/turbo
-$ cd $GOPATH/src/github.com/ramitsurana/turbo
-$ go run main.go
-$ go build github.com/ramitsurana/turbo
-$ ./turbo
-Turbo:
-  Powerful CLI Tool for Docker
+<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														
+														
+													</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td>Command</td>
+														<td>Description</td>
+														
+													</tr>
+													<tr>
+														<td>clean</td>
+														<td>Cleans up all your docker images from your system</td>
+														
+													</tr>
+													<tr>
+														<td>clear</td>
+														<td>Clears all your exited or stopped docker containers from your system</td>
+														
+													</tr>
+													<tr>
+														<td>monitor</td>
+														<td>Monitors your docker containers</td>
+														
+													</tr>
+													<tr>
+														<td>backup</td>
+														<td>Creates a backup copy of your Docker Stuff</td>
+														
+													</tr>
+													<tr>
+														<td></td>
+														<td>More to come</td>
+														
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="https://github.com/ramitsurana/turbo" target="_blank" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
 
-Usage:
-  Turbo [command]
+						<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Statistics</h2>
+									<p></p>
+								</header>
+								<ul class="statistics">
+									<li class="style1">
+										<span class="icon fa-code-fork"></span>
+										<strong>1</strong> Forks
+									</li>
+									<li class="style2">
+										<span class="icon fa-users"></span>
+										<strong>1</strong> Contributors
+									</li>
+									<li class="style3">
+										<span class="icon fa-star"></span>
+										<strong>1</strong> Stars
+									</li>
+									<li class="style4">
+										<span class="icon fa-exclamation"></span>
+										<strong>0</strong>Issues 
+									</li>
+									<li class="style5">
+										<span class="icon fa-download"></span>
+										<strong>1</strong>Downloads 
+									</li>
+								</ul>
+								<p class="content"></p>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="https://github.com/ramitsurana/turbo" target="_blank" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
 
-Available Commands:
-  backup      backups all your docker stuff
-  clean       cleans up all your docker images
-  clear       wipes off all the stopped containers
-  kickstart   &lt;W.I.P.&gt;Restarts all your containers quickly
-  monitor     To monitor your containers
-  replica     replicates your containers
-  search      Search images from multiple registries
-  ship        ships off all your docker images
-  version     prints the current version number of turbo
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Demo</h2>
+									<p>Coming Soon</p>
+								</header>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="#intro"  class="button special">Get Started</a></li>
+										<li><a href="https://github.com/ramitsurana/turbo" target="_blank" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
 
-Flags:
-      --config string   config file (default is $HOME/.turbo.yaml)
-  -h, --help            help for Turbo
-  -t, --toggle          Help message for toggle
+					</div>
 
-Use "Turbo [command] --help" for more information about a command.
-</code></pre>
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Twitter feed</h2>
+							<p><a class="twitter-timeline" data-dnt="true" href="https://twitter.com/ramitsurana" data-widget-id="593779796229763072">Tweets by @ramitsurana</a>           
+          </p>
+							<ul class="actions">
+								<li><a href="https://github.com/ramitsurana/turbo" target="_blank" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Share Information</h2>
+							<dl class="alt">
+								<dt>Share</dt>
+								<dd><!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_hacker_news"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_digg"></a>
+<a class="a2a_button_email"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END --></dd>								
+								<dt>Email</dt>
+								<dd><a href="mailto:ramitsurana@gmail.com" target="_blank">ramitsurana@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="https://twitter.com/ramitsurana" target="_blank" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="https://facebook.com/ramitsurana" target="_blank" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+								<li><a href="https://linkedin.com/in/ramitsurana" target="_blank" class="icon fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ramitsurana" target="_blank" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Ramit Surana</p>
+					</footer>
 
-<p>Adding it to your path :</p>
+			</div>
 
-<pre><code>$ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
-</code></pre>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<h2>
-<a id="about-turbo" class="anchor" href="#about-turbo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Turbo</h2>
-
-<p><a href="http://ramitsurana.github.io/turbo">Turbo</a> is a cool new way to use <a href="http://docker.com">docker</a> in a fun and easy way.It uses <a href="http://docker.com">docker</a> commands in the backend.Built using Golang.This project is dedicated to docker users who would like to use <a href="http://docker.com">docker</a> in a more effective and faster way.</p>
-
-<h2>
-<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commands</h2>
-
-<p><a href="#backup">Backup</a> | <a href="#clean">Clean</a> | <a href="#version">Version</a> | <a href="#clean">Clean</a> | <a href="kickstart">Kickstart</a></p>
-
-<h3>
-<a id="backup" class="anchor" href="#backup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Backup</h3>
-
-<p>Backups all your stuff so that you can have a copy in case anything goes wrong.</p>
-
-<pre><code>$turbo backup
-</code></pre>
-
-<h3>
-<a id="clean" class="anchor" href="#clean" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clean</h3>
-
-<p>Wipes of all your docker images from your system.</p>
-
-<pre><code>$turbo clean
-</code></pre>
-
-<h3>
-<a id="clear" class="anchor" href="#clear" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Clear</h3>
-
-<p>Kills all of your stopped containers.</p>
-
-<pre><code>$turbo clear
-</code></pre>
-
-<h3>
-<a id="kickstart" class="anchor" href="#kickstart" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kickstart</h3>
-
-<p>Restarts all of your containers.</p>
-
-<pre><code>$turbo kickstart
-</code></pre>
-
-<h3>
-<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h3>
-
-<p>Displays info about version of turbo.</p>
-
-<pre><code>$turbo version
-</code></pre>
-
-<h2>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo</h2>
-
-<p>Coming Soon</p>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
-
-<p><a href="LICENSE">Apache License 2.0</a></p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/ramitsurana/turbo">Turbo</a> is maintained by <a href="https://github.com/ramitsurana">ramitsurana</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+	</body>
 </html>
