@@ -100,7 +100,7 @@ $turbo version
 ````
 ## Demo
 
-Coming Soon
+![turbo](https://cloud.githubusercontent.com/assets/8342133/16805119/72fd724c-492c-11e6-9da1-6151a70df1d4.gif)
 
 ## Contributing
 
