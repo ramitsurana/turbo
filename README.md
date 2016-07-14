@@ -4,6 +4,8 @@ Powerful CLI tool for [Docker][1]
 
 [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
 [![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000?style=flat-square)](https://twitter.com/ramitsurana)
+[![Twitter Follow](https://img.shields.io/twitter/follow/shields_io.svg?style=social&label=Follow&maxAge=2592000?style=flat-square)](https://twitter.com/ramitsurana)
 
 ![turbo1](https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png)
 
@@ -19,8 +21,6 @@ Powerful CLI tool for [Docker][1]
 ````
 $ go get -v github.com/ramitsurana/turbo
 $ cd $GOPATH/src/github.com/ramitsurana/turbo
-$ go run main.go
-$ go build github.com/ramitsurana/turbo
 $ ./turbo
 Turbo:
   Powerful CLI Tool for Docker
