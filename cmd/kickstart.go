@@ -16,19 +16,38 @@ package cmd
 
 import (
 	"fmt"
-
+	"log"
+	"os/exec"
 	"github.com/spf13/cobra"
 )
 
 
 var kickstartCmd = &cobra.Command{
-	Use:   "kickstart",
-	Short: "<W.I.P.>Restarts all your containers quickly",
+	Use:   "kickstart <W.I.P.>",
+	Short: "restarts all your containers quickly",
 	Long: `Restarts all your containers quickly`,
 	Run: func(cmd *cobra.Command, args []string) {
+
+		fmt.Println("Scanning Containers ...")
+		arg0 := "docker"
+                arg1 := "restart"
+                arg2 := "$(docker"
+                arg3 := "ps"
+                arg4 := "-a"
+                arg5 := "-q)"                 
+
+		cmd1 := exec.Command(arg0, arg1, arg2, arg3, arg4, arg5)
+                err1 := cmd1.Start()
+
+    		if err1 != nil {	 	      
+                      //println(err1.Error())
+		      log.Fatal(err1)
+		      log.Printf("\nFailed to restart containers ...")
+                      //return
+    		}
 		
 		fmt.Println("Your containers are up and running")
-	},
+		},			
 }
 
 func init() {

@@ -36,7 +36,7 @@ var monitorCmd = &cobra.Command{
                 stdout1, err1 := cmd1.Output()
 
 		if err1 != nil {	 	                            
-		      log.Printf("\nFailed to search via Docker Registry.Please check your Internet connection.")
+		      log.Printf("\nFailed to search.Please check your Internet connection.")
 		      println(err1.Error())		      		     		      		  
                       return
     		}    

@@ -26,7 +26,7 @@ import (
 
 var cleanCmd = &cobra.Command{
 	Use:   "clean",
-	Short: "cleans up all your docker images",
+	Short: "Cleans up all your docker images",
 	Long: `clean up your docker images `,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Cleaning images ...\n", color.RedString("WARNING"),": This action will clean up all your Docker images.")
@@ -42,10 +42,20 @@ var cleanCmd = &cobra.Command{
 			if err1 != nil {
                 	log.Fatal(err1)
 			log.Printf("Images removal failed ...")
-        		}		
-		fmt.Println("All images cleaned")
-		}		
-	},
+        		}
+			fmt.Println("All images cleaned")
+		}else {
+			cmd2 := exec.Command("exit")
+			err2 := cmd2.Start()
+			if err2 != nil {
+                	log.Fatal(err2)
+			log.Printf("Failed to exit")
+        		}
+			fmt.Println("Exiting ...")
+		}
+
+		fmt.Println("\nDone")				
+		},
 }
 
 func init() {

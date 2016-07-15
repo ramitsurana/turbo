@@ -23,14 +23,14 @@ import (
 )
 
 var replicaCmd = &cobra.Command{
-	Use:   "replica [number]",
+	Use:   "replica",
 	Short: "replicates your containers",
 	Long: `Uses the same image to bring up multiple containers`,
 	Run: func(cmd *cobra.Command, args []string) {
 		
 	        fmt.Println("No. of Containers to create " + strings.Join(args, " "))
-
-
+		
+		//Will be Using loop in the next release
 		fmt.Println("Creating 1 st container ...")
 		cmd1 := exec.Command("docker", "create", "$2")
 		err1 := cmd1.Start()
