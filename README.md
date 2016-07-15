@@ -1,6 +1,6 @@
 # Turbo 
 
-Powerful CLI tool for [Docker][1]
+Advanced Next Generation Tool for [Docker][1]
 
 [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
 [![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
