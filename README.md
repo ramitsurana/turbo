@@ -37,8 +37,8 @@ Docker is an amazing effort towards making the containers easy to adapt.It has a
 ````
 $ go get -v github.com/ramitsurana/turbo
 $ cd $GOPATH/src/github.com/ramitsurana/turbo
+$ go build main.go
 $ ./turbo
-````
 Turbo:
   Simple and Powerfull utility for Docker
 
@@ -63,7 +63,6 @@ Flags:
   -t, --toggle          Help message for toggle
 
 Use "Turbo [command] --help" for more information about a command.
-
 ````
 
 Adding it to your path :
