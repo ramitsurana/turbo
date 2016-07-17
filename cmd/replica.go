@@ -24,8 +24,8 @@ import (
 
 var replicaCmd = &cobra.Command{
 	Use:   "replica",
-	Short: "replicates your containers",
-	Long: `Uses the same image to bring up multiple containers`,
+	Short: "To create Replicas of your containers",
+	Long: `To create Replicas of your containers`,
 	Run: func(cmd *cobra.Command, args []string) {
 		
 	        fmt.Println("No. of Containers to create " + strings.Join(args, " "))

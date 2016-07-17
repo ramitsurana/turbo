@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package ship
+package cmd_test
 
-import "testing"
+import ("testing"
+"github.com/ramitsurana/turbo"
+)
 
 func TestHello(t *testing.T){
   expected := "Done"
