@@ -37,8 +37,8 @@ Docker is an amazing effort towards making the containers easy to adapt.It has a
 ````
 $ go get -v github.com/ramitsurana/turbo
 $ cd $GOPATH/src/github.com/ramitsurana/turbo
+$ go build main.go
 $ ./turbo
-````
 Turbo:
   Simple and Powerfull utility for Docker
 
@@ -63,7 +63,6 @@ Flags:
   -t, --toggle          Help message for toggle
 
 Use "Turbo [command] --help" for more information about a command.
-
 ````
 
 Adding it to your path :
@@ -77,7 +76,7 @@ $ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
 
 ## Commands
 
-[Backup](#backup) | [Clean](#clean) | [Version](#version) | [Clean](#clean) | [Kickstart](kickstart)
+[Backup](#backup) | [Clean](#clean) | [Version](#version) | [Destroy](#destroy) | [Kickstart](kickstart)
 
 ### Backup
 
@@ -95,9 +94,9 @@ Wipes of all your docker images from your system.
 $turbo clean
 ````
 
-### Clear
+### Destroy
 
-Kills all of your stopped containers.
+Kills all of your exited containers.
 
 ````
 $turbo clear
@@ -128,3 +127,4 @@ Contributions can be made easily by making PR's and opening issues on the github
 
 [1]: http://docker.com
 [2]: http://ramitsurana.github.io/turbo
+

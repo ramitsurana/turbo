@@ -25,7 +25,7 @@ var versionCmd = &cobra.Command{
 	Short: "prints the current version number of turbo",
 	Long: `Print the version number of Turbo`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("0.0.1")		
+		fmt.Println("0.3")		
 	},
 }
 
