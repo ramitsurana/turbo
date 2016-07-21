@@ -32,8 +32,9 @@ var cleanCmd = &cobra.Command{
 		fmt.Println("Cleaning images ...\n", color.RedString("WARNING"),": This action will clean up all your Docker images.")
 
 		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("Are you sure you wish to continue (y/n): ")
+		fmt.Print("Are you sure you wish to continue (y/n): ")		
 		text, _ := reader.ReadString('\n')
+		fmt.Scanf("%s",&text)
 		
 		if text == "y" {
 			fmt.Println("Cleaning images ...")		

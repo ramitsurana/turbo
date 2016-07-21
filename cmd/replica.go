@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os/exec"
 	"log"
-	"strings"	
+	//"strings"	
 	"github.com/spf13/cobra"
 )
 
@@ -27,37 +27,25 @@ var replicaCmd = &cobra.Command{
 	Short: "To create Replicas of your containers",
 	Long: `To create Replicas of your containers`,
 	Run: func(cmd *cobra.Command, args []string) {
+		var x int
+		var y string
 		
-	        fmt.Println("No. of Containers to create " + strings.Join(args, " "))
-		
-		//Will be Using loop in the next release
-		fmt.Println("Creating 1 st container ...")
-		cmd1 := exec.Command("docker", "create", "$2")
+		fmt.Println("No. of Containers to create:")
+		fmt.Scanf("%d",&x)
+
+		fmt.Println("Name of the image:")
+		fmt.Scanf("%s",&y)	        
+
+		for i := 0; i < x; i++ {	        
+		cmd1 := exec.Command("docker", "create", "&y")
 		err1 := cmd1.Start()
 		if err1 != nil {
                 	log.Fatal(err1)
-			log.Printf("1 st container has failed ...")
+			log.Printf("Creating Containers has failed ...")
         	}		
-		fmt.Println("1st container created")
-	
-		fmt.Println("Creating 2 nd container ...")
-		cmd2 := exec.Command("docker", "create", "$2")
-		err2 := cmd2.Start()
-		if err2 != nil {
-                	log.Fatal(err2)
-			log.Printf("2 nd container has failed ...")
-        	}		
-		fmt.Println("2nd container created")
-	
-		fmt.Println("Creating 3 rd container ...")
-		cmd3 := exec.Command("docker", "create", "$2")
-		err3 := cmd3.Start()
-		if err3 != nil {
-                	log.Fatal(err3)
-			log.Printf("3 rd container has failed ...")
-        	}		
-		fmt.Println("All the containers are created.Here are there ID's:")
-	},
+		fmt.Println(i, "st Container created")
+    		}
+	},				
 }	
 
 func init() {
