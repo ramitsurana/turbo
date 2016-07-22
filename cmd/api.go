@@ -34,7 +34,7 @@ var apiCmd = &cobra.Command{
 		mux := http.NewServeMux()
 		mux.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("./api"))))
 		log.Println("Serving website at:", *addr)
-		http.ListenAndServe(*addr, mux)					
+		http.ListenAndServe(*addr, mux)							
 	        },
 }
 

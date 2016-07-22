@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package main_test
 
-import (
-    "github.com/ramitsurana/turbo/cmd"    	   
-)
+import "testing"
 
-func main() {        	
-        cmd.Execute()
+
+func Test(t *testing.T){
 }
+
+

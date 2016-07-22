@@ -12,12 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package cmd_test
 
-import (
-    "github.com/ramitsurana/turbo/cmd"    	   
+import ("testing"
+"github.com/ramitsurana/turbo"
 )
 
-func main() {        	
-        cmd.Execute()
+func TestHello(t *testing.T){
+  expected := "Done"
+  actual := hello()
+  if actual != expected {
+    t.Error("Test failed")
+  }
 }
+
+
