@@ -35,10 +35,12 @@ Docker is an amazing effort towards making the containers easy to adapt.It has a
 ### Steps to follow
 
 ````
-$ go get -v github.com/ramitsurana/turbo
-$ cd $GOPATH/src/github.com/ramitsurana/turbo
-$ go build main.go
-$ ./turbo
+$ wget https://github.com/ramitsurana/turbo/archive/v0.1.tar.gz
+$ tar xvf turbov0.1.tar.gz
+$ cd turbov0.1 
+$ chmod +x turbo
+$ sudo cp turbo /usr/local/bin
+$ turbo
 Turbo:
   Simple and Powerfull utility for Docker
 
@@ -65,11 +67,6 @@ Flags:
 Use "Turbo [command] --help" for more information about a command.
 ````
 
-Adding it to your path :
-
-````
-$ alias turbo="sudo '${GOPATH}/src/github.com/ramitsurana/turbo/turbo'"
-````
 ## About Turbo
 
 [Turbo][2] is a cool new way to use [docker][1] in a fun and easy way.It uses [docker][1] commands in the backend.Built using Golang.This project is dedicated to docker users who would like to use [docker][1] in a more effective and faster way.
