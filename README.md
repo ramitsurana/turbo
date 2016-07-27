@@ -39,13 +39,14 @@ Turbo uses some 3rd party tools for giving the best perfomance to the [docker][1
 
 * Glances
 * [Minikube][4]
+* [Logspout][5]
 
 ### Steps to follow
 
 ````
-$ curl -Lo https://github.com/ramitsurana/turbo/archive/v0.1.tar.gz 
-$ tar xvf turbov0.1.tar.gz
-$ cd turbov0.1 
+$ curl -Lo https://github.com/ramitsurana/turbo/archive/v0.2.tar.gz 
+$ tar xvf turbov0.2.tar.gz
+$ cd turbov0.2 
 $ chmod +x turbo
 $ sudo mv turbo /usr/local/bin
 $ turbo
@@ -56,11 +57,14 @@ Usage:
   Turbo [command]
 
 Available Commands:
+  api         Serves an GUI for turbo
   backup      backups all your docker stuff
   clean       Cleans up all your docker images
   destroy     Erases off all the exited containers
   kickstart   restarts all your containers quickly
+  log         Uses logspout to collect your docker logs
   monitor     To monitor your containers
+  refresh     Completely removes and re-installs docker
   replica     To create Replicas of your containers
   rkt         Installs and configures rkt
   search      Search images from multiple registries
@@ -73,14 +77,22 @@ Flags:
   -t, --toggle          Help message for toggle
 
 Use "Turbo [command] --help" for more information about a command.
+
 ````
 
 ## Commands
 
+* [Api](#api)
 * [Backup](#backup)
 * [Clean](#clean)
 * [Destroy](#destroy)
 * [Kickstart](#kickstart)
+* [Log](#log)
+* [Monitor](#monitor)
+* [Refresh](#refresh)
+* [Replica](#replica)
+* [Rkt](#rkt)
+* [Search](#search)
 * [Ship](#ship)
 * [Version](#version)
 
@@ -137,7 +149,8 @@ $ turbo version
 
 ## Contributing
 
-Contributions can be made easily by making PR's and opening issues on the github repo.Big Thank you to all the [contributors][3] !
+Contributions can be made easily by making PR's and opening issues on the github repo.
+Big Thank you to all the [contributors][3] for your awesome contributions !
 
 ## License
 
@@ -147,3 +160,4 @@ Contributions can be made easily by making PR's and opening issues on the github
 [2]: http://ramitsurana.github.io/turbo
 [3]: https://github.com/ramitsurana/turbo/graphs/contributors
 [4]: http://github.com/kubernetes/minikube
+[5]: https://github.com/gliderlabs/logspout
