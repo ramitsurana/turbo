@@ -44,8 +44,7 @@ Turbo uses some 3rd party tools for giving the best perfomance to the [docker][1
 ### Steps to follow
 
 ````
-$ curl -Lo https://github.com/ramitsurana/turbo/archive/v0.2.tar.gz 
-$ tar xvf turbov0.2.tar.gz
+$ curl -L https://github.com/ramitsurana/turbo/archive/v0.2.tar.gz | tar zx
 $ cd turbov0.2 
 $ chmod +x turbo
 $ sudo mv turbo /usr/local/bin
