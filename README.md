@@ -8,38 +8,46 @@ Simple and Powerfull Utility for [Docker][1]
 
 ![turbo1](https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png)
 
+## What is Turbo ?
+
+Turbo is a simple and easy to use utility that can be used over a docker ready enviorment.Its main purpose is to simplify the use of docker,in a simple and useful manner.It is a useful combination of a variety of different tools used to manage docker containers.
+
+## Features
+
+* Supports multiple 3rd party tools
+* Built to be used as Binary file
+* Contains several advanced features for [docker][1]
+
+
 ## Getting Started
 
 ![turbo](https://cloud.githubusercontent.com/assets/8342133/16805119/72fd724c-492c-11e6-9da1-6151a70df1d4.gif)
 
-### Prerequisites
+### Requirements
 
 * Go v1.6
-* Docker v1.11 and above
+* [Docker][1] v1.11 and above
+* Linux 
+
+**Tested for the above specifications.Results may vary accordingly.**
 
 (Note that the code uses the relatively new Go vendoring, so building requires Go 1.6 or later, or you must export GO15VENDOREXPERIMENT=1 when building with Go 1.5.) 
 
-### Principles:
+### 3rd party tools
 
-We welcome every idea that the contributors put forward to.But to analyze the best amongst them, we consider two basic & important fundamental principles
+Turbo uses some 3rd party tools for giving the best perfomance to the [docker][1] users.Some of these are
 
-* KISS(Keep it simple stupid)
-
-The idea of the project [Turbo][2] is to make the lives of docker users more easy and time saving than before.If you have got an idea that you think is useful and simple to implement for [docker][1] users.Please submit us your idea by creating an issue !!
-
-* Don't Reinvent the Wheel
-
-Docker is an amazing effort towards making the containers easy to adapt.It has a variety of amazing and awesome features for the open source community.By building [Turbo][2],let's try to not build it into a subsitute of features that [Docker][1] already has !!
-
+* Glances
+* [Minikube][4]
 
 ### Steps to follow
 
 ````
-$ wget https://github.com/ramitsurana/turbo/archive/v0.1.tar.gz
+$ curl -Lo https://github.com/ramitsurana/turbo/archive/v0.1.tar.gz 
 $ tar xvf turbov0.1.tar.gz
 $ cd turbov0.1 
 $ chmod +x turbo
-$ sudo cp turbo /usr/local/bin
+$ sudo mv turbo /usr/local/bin
 $ turbo
 Turbo:
   Simple and Powerfull utility for Docker
@@ -67,28 +75,32 @@ Flags:
 Use "Turbo [command] --help" for more information about a command.
 ````
 
-## About Turbo
-
-[Turbo][2] is a cool new way to use [docker][1] in a fun and easy way.It uses [docker][1] commands in the backend.Built using Golang.This project is dedicated to docker users who would like to use [docker][1] in a more effective and faster way.
-
 ## Commands
 
-[Backup](#backup) | [Clean](#clean) | [Version](#version) | [Destroy](#destroy) | [Kickstart](kickstart)
+* [Backup](#backup)
+* [Clean](#clean)
+* [Destroy](#destroy)
+* [Kickstart](#kickstart)
+* [Ship](#ship)
+* [Version](#version)
+
+
+**More to come**
 
 ### Backup
 
 Backups all your stuff so that you can have a copy in case anything goes wrong.
 
 ````
-$turbo backup
+$ turbo backup
 ````
 
 ### Clean
 
-Wipes of all your docker images from your system.
+Wipes of all your [docker][1] images from your system.
 
 ````
-$turbo clean
+$ turbo clean
 ````
 
 ### Destroy
@@ -96,7 +108,7 @@ $turbo clean
 Kills all of your exited containers.
 
 ````
-$turbo clear
+$ turbo destroy
 ````
 
 ### Kickstart 
@@ -104,19 +116,28 @@ $turbo clear
 Restarts all of your containers.
 
 ````
-$turbo kickstart
+$ turbo kickstart
 ````
+
+### Ship
+
+Transfers all your Docker images to a remote i.p.
+
+````
+$ turbo ship
+````
+
 ### Version
 
 Displays info about version of turbo.
 
 ````
-$turbo version
+$ turbo version
 ````
 
 ## Contributing
 
-Contributions can be made easily by making PR's and opening issues on the github repo.Big Thank you to all the contributors !
+Contributions can be made easily by making PR's and opening issues on the github repo.Big Thank you to all the [contributors][3] !
 
 ## License
 
@@ -124,4 +145,5 @@ Contributions can be made easily by making PR's and opening issues on the github
 
 [1]: http://docker.com
 [2]: http://ramitsurana.github.io/turbo
-
+[3]: https://github.com/ramitsurana/turbo/graphs/contributors
+[4]: http://github.com/kubernetes/minikube
