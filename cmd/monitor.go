@@ -28,6 +28,8 @@ var monitorCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("Checking ...")
 
+//docker run -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host -it docker.io/nicolargo/glances
+
 		arg0 := "glances"
                 arg1 := "-w"
                 arg2 := "$2"    

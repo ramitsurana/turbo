@@ -40,8 +40,12 @@ Turbo uses some 3rd party tools for giving the best perfomance to the [docker][1
 * Glances
 * [Minikube][4]
 * [Logspout][5]
+* [Harbor][6]
+* [Minikube][7]
 
-### Steps to follow
+### Getting Started
+
+Checkout [releases](https://github.com/ramitsurana/turbo/releases) for proper installation instructions.
 
 ````
 $ curl -Lo https://github.com/ramitsurana/turbo/archive/v0.2.tar.gz 
@@ -61,8 +65,10 @@ Available Commands:
   backup      backups all your docker stuff
   clean       Cleans up all your docker images
   destroy     Erases off all the exited containers
+  harbor      installs and configures vmware harbor
   kickstart   restarts all your containers quickly
   log         Uses logspout to collect your docker logs
+  minikube    Installs and configure minikube for your system
   monitor     To monitor your containers
   refresh     Completely removes and re-installs docker
   replica     To create Replicas of your containers
@@ -95,6 +101,8 @@ Use "Turbo [command] --help" for more information about a command.
 * [Search](#search)
 * [Ship](#ship)
 * [Version](#version)
+* [Minikube](#minikube)
+* [Harbor](#harbor)
 
 
 **More to come**
@@ -161,3 +169,5 @@ Big Thank you to all the [contributors][3] for your awesome contributions !
 [3]: https://github.com/ramitsurana/turbo/graphs/contributors
 [4]: http://github.com/kubernetes/minikube
 [5]: https://github.com/gliderlabs/logspout
+[6]: https://github.com/vmware/harbor
+[7]: https://github.com/kubernetes/minikube
