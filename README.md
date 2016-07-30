@@ -2,7 +2,13 @@
 
 Simple and Powerfull Utility for [Docker][1]
 
+**Code Quality** 
 [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
+
+**Documentation**
+[![GoDoc](https://godoc.org/github.com/ramitsurana/turbo?status.svg)](https://godoc.org/github.com/ramitsurana/turbo)
+
+**Tests**
 [![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
 [![Build Status](https://drone.io/github.com/ramitsurana/turbo/status.png)](https://drone.io/github.com/ramitsurana/turbo/latest)
 [![Build Status](https://semaphoreci.com/api/v1/ramitsurana/turbo/branches/master/badge.svg)](https://semaphoreci.com/ramitsurana/turbo)
