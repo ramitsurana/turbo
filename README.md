@@ -15,6 +15,8 @@ Simple and Powerfull Utility for [Docker][1]
 
 ![turbo1](https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png)
 
+The snail is &copy; under [Deamworks Animation](http://www.dreamworksanimation.com/) movie [Turbo](https://en.wikipedia.org/wiki/Turbo_(film)).It is used for non-profit & non-commercial representation purposes only.
+
 ## What is Turbo ?
 
 Turbo is a simple and easy to use utility that can be used over a docker ready enviorment.Its main purpose is to simplify the use of docker,in a simple and useful manner.It is a useful combination of a variety of different tools used to manage docker containers.
@@ -32,7 +34,7 @@ Turbo is a simple and easy to use utility that can be used over a docker ready e
 
 ### Requirements
 
-* Go v1.6
+* [Go](http://golang.org) v1.6
 * [Docker][1] v1.11 and above
 * Linux 
 
