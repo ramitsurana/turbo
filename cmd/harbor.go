@@ -31,11 +31,12 @@ var harborCmd = &cobra.Command{
 				
 		fmt.Println("Cloning Harbor ..")
 		cmd1 := exec.Command("git", "clone", "https://github.com/vmware/harbor")
-		err1 := cmd1.Start()
+		err1 := cmd1.Start()		
 		if err1 != nil {                	
 			log.Printf("Cloning Failed")
 			os.Exit(1)			
-        		}		
+        		}
+		err1 = cmd1.Wait()				
 		fmt.Println("Cloning Successfull ..")
 		
 		fmt.Println("Checking Harbor.cfg ...\n")
@@ -45,7 +46,7 @@ var harborCmd = &cobra.Command{
 		fi, err2 := os.Open("harbor.cfg")
 		if err2 != nil {
 		        panic(err2)	
-		}
+		}		
     		// close fi on exit and check for its returned error
 		defer func() {
 	        if err3 := fi.Close(); err3 != nil {
@@ -60,7 +61,8 @@ var harborCmd = &cobra.Command{
                 	log.Fatal(err4)
 			log.Printf("Cannot find Deploy")
 			os.Exit(1)
-        		}				
+        		}
+		err4 = cmd2.Wait()				
 		fmt.Println("Running Prepare.sh ... ")					
 		
 		cmd3 := exec.Command("./prepare")
@@ -69,7 +71,8 @@ var harborCmd = &cobra.Command{
                 	log.Fatal(err5)
 			log.Printf("Cannot run prepare.sh")
 			os.Exit(1)
-        		}				
+        		}
+		err5 = cmd3.Wait()				
 		fmt.Println("Using Docker compose up ...")					
 		
 		cmd4 := exec.Command("sudo", "docker-compose", "up", "-d")
@@ -78,7 +81,8 @@ var harborCmd = &cobra.Command{
                 	log.Fatal(err6)
 			log.Printf("Failed to use docker-compose up.")
 			os.Exit(1)
-        		}				
+        		}
+		err6 = cmd4.Wait()				
 		fmt.Println("Harbor completely installed & configured to use.Please open the hostname as url in your browser.")		
 		},
 }

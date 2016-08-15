@@ -29,6 +29,13 @@ var minikubeCmd = &cobra.Command{
 	Long: `Install and configures minikube on your enviorment `,
 	Run: func(cmd *cobra.Command, args []string) {
 		
+		_, err0 := exec.LookPath("minikube")
+		if err0 == nil {			
+			fmt.Println("Minikube is already installed.Exiting ...")		
+			os.Exit(1)
+			}		
+		fmt.Printf("Minikube is not installed.Installing ...")
+
 		arg0 := "curl"
                 arg1 := "-Lo"
                 arg2 := "minikube"                
@@ -61,15 +68,16 @@ var minikubeCmd = &cobra.Command{
                 	log.Fatal(err1)
 			log.Printf("Downloading failed")
 			os.Exit(1)			
-        		}		
+        		}
+		err1 = cmd1.Wait()		
 		fmt.Println("Downloading Successfull")
 
 		fmt.Println("Checking for kubectl ...")
 		_, err2 := exec.LookPath("kubectl")
 		if err2 != nil {
 		log.Fatal(err2)
-		log.Printf("Kubectl is not installed.")		
-		}
+			log.Printf("Kubectl is not installed.")		
+			}		
 		fmt.Printf("Installing kubectl ...")
 		
 		cmd2 := exec.Command(arg0, arg1, arg9, arg12, arg3, arg4, arg5, arg9, arg3, arg6, arg7, arg9, arg8)
@@ -77,7 +85,8 @@ var minikubeCmd = &cobra.Command{
 		if err3 != nil {
                 	log.Fatal(err3)
 			log.Printf("Unable to install kubectl")
-        		}				
+        		}
+		err3 = cmd2.Wait()				
 		fmt.Println("Kubectl installed.")
 				
 		cmd3 := exec.Command(arg2,arg13)
@@ -86,7 +95,8 @@ var minikubeCmd = &cobra.Command{
                 	log.Fatal(err4)
 			log.Printf("Failed to start minikube")
 			os.Exit(1)
-        		}				
+        		}
+		err4 = cmd3.Wait()				
 		fmt.Println("Minikube is installed and set for use")
 		}			
 		
@@ -100,7 +110,8 @@ var minikubeCmd = &cobra.Command{
                 	log.Fatal(err5)
 			log.Printf("Downloading failed")
 			os.Exit(1)			
-        		}		
+        		}
+		err5 = cmd4.Wait()		
 		fmt.Println("Downloading Successfull")
 
 		fmt.Println("Checking for kubectl ...")
@@ -116,7 +127,8 @@ var minikubeCmd = &cobra.Command{
 		if err7 != nil {
                 	log.Fatal(err7)
 			log.Printf("Unable to Untar the file")
-        		}				
+        		}
+		err7 = cmd6.Wait()				
 		fmt.Println("Setting path ...")
 		
 		

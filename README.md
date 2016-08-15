@@ -3,15 +3,15 @@
 Simple and Powerfull Utility for [Docker][1]
 
 **Code Quality** 
-[![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
+ [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
 
 **Documentation**
-[![GoDoc](https://godoc.org/github.com/ramitsurana/turbo?status.svg)](https://godoc.org/github.com/ramitsurana/turbo)
+ [![GoDoc](https://godoc.org/github.com/ramitsurana/turbo?status.svg)](https://godoc.org/github.com/ramitsurana/turbo)
 
 **Tests**
-[![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
-[![Build Status](https://drone.io/github.com/ramitsurana/turbo/status.png)](https://drone.io/github.com/ramitsurana/turbo/latest)
-[![Build Status](https://semaphoreci.com/api/v1/ramitsurana/turbo/branches/master/badge.svg)](https://semaphoreci.com/ramitsurana/turbo)
+ [![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
+ [![Build Status](https://drone.io/github.com/ramitsurana/turbo/status.png)](https://drone.io/github.com/ramitsurana/turbo/latest)
+ [![Build Status](https://semaphoreci.com/api/v1/ramitsurana/turbo/branches/master/badge.svg)](https://semaphoreci.com/ramitsurana/turbo)
 
 ![turbo1](https://cloud.githubusercontent.com/assets/8342133/16713587/95b469bc-46ca-11e6-8fb3-e56c7ce7d19d.png)
 
@@ -49,6 +49,8 @@ Turbo uses some 3rd party tools for giving the best perfomance to the [docker][1
 * [Logspout][5]
 * [Harbor][6]
 * [Minikube][7]
+
+*Note: These are third party installtions and works only when you use there specific commands.They are not dependencies.*
 
 ### Getting Started
 
@@ -94,72 +96,26 @@ Use "Turbo [command] --help" for more information about a command.
 
 ## Commands
 
+*Not in Aphabetical Order*
+
 * [Api](#api)
-* [Backup](#backup)
-* [Clean](#clean)
-* [Destroy](#destroy)
-* [Kickstart](#kickstart)
-* [Log](#log)
+* [Backup](#backup) - Backups all your stuff so that you can have a copy in case anything goes wrong.
+* [Clean](#clean) - Wipes of all your [docker][1] images from your system.
+* [Destroy](#destroy) - Kills all of your exited containers.
+* [Kickstart](#kickstart) - Restarts all your containers
+* [Log](#log) - Installs and configures logspout on your system
 * [Monitor](#monitor)
-* [Refresh](#refresh)
+* [Refresh](#refresh) - Removes Docker ecosystem and Installs a new one
 * [Replica](#replica)
-* [Rkt](#rkt)
-* [Search](#search)
-* [Ship](#ship)
-* [Version](#version)
-* [Minikube](#minikube)
-* [Harbor](#harbor)
+* [Rkt](#rkt) - Installs and configures rkt on your system
+* [Search](#search) - Searches Docker registry hub,quay.io for your images
+* [Ship](#ship) -  Ships off all your Docker Stuff to remote <I.P>
+* [Version](#version) - Displays Turbo version  
+* [Minikube](#minikube) - Installs and Configures Minikube on your system
+* [Harbor](#harbor) - Installs and configures Harbor on your system
 
 
 **More to come**
-
-### Backup
-
-Backups all your stuff so that you can have a copy in case anything goes wrong.
-
-````
-$ turbo backup
-````
-
-### Clean
-
-Wipes of all your [docker][1] images from your system.
-
-````
-$ turbo clean
-````
-
-### Destroy
-
-Kills all of your exited containers.
-
-````
-$ turbo destroy
-````
-
-### Kickstart 
-
-Restarts all of your containers.
-
-````
-$ turbo kickstart
-````
-
-### Ship
-
-Transfers all your Docker images to a remote i.p.
-
-````
-$ turbo ship
-````
-
-### Version
-
-Displays info about version of turbo.
-
-````
-$ turbo version
-````
 
 ## Contributing
 
