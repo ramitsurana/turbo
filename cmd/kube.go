@@ -23,8 +23,8 @@ import (
 	"runtime"
 )
 
-var minikubeCmd = &cobra.Command{
-	Use:   "minikube",
+var kubeCmd = &cobra.Command{
+	Use:   "kube",
 	Short: "Installs and configure minikube for your system",
 	Long: `Install and configures minikube on your enviorment `,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -145,5 +145,5 @@ var minikubeCmd = &cobra.Command{
 }
 
 func init() {
-	RootCmd.AddCommand(minikubeCmd)		
+	RootCmd.AddCommand(kubeCmd)		
 }

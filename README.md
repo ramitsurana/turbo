@@ -71,15 +71,16 @@ Usage:
   Turbo [command]
 
 Available Commands:
-  api         Serves an GUI for turbo
   backup      backups all your docker stuff
   clean       Cleans up all your docker images
   destroy     Erases off all the exited containers
   harbor      installs and configures vmware harbor
   kickstart   restarts all your containers quickly
+  kube        Installs and configure minikube for your system
+  ldap        Uses to install and configure Openldap
   log         Uses logspout to collect your docker logs
-  minikube    Installs and configure minikube for your system
   monitor     To monitor your containers
+  proxy       Installs and configure squid3 proxy for your system
   refresh     Completely removes and re-installs docker
   replica     To create Replicas of your containers
   rkt         Installs and configures rkt
@@ -113,8 +114,10 @@ Use "Turbo [command] --help" for more information about a command.
 * [Search](#search) - Searches Docker registry hub,quay.io for your images
 * [Ship](#ship) -  Ships off all your Docker Stuff to remote <I.P>
 * [Version](#version) - Displays Turbo version  
-* [Minikube](#minikube) - Installs and Configures Minikube on your system
+* [kube](#kube) - Installs and Configures Minikube on your system
 * [Harbor](#harbor) - Installs and configures Harbor on your system
+* [Proxy](#proxy) - Installs and configures squid proxy on your system
+* [Ldap](#ldap) - Installs and configures Openldap on your system
 
 
 **More to come**
