@@ -2,6 +2,8 @@
 
 Simple and Powerfull Utility for [Docker][1]
 
+Introductory blog post - https://ramitsurana.github.io/myblog/docker%20containers/introducing-turbo-for-docker
+
 **Code Quality** 
  [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
 
