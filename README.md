@@ -2,15 +2,10 @@
 
 Simple and Powerfull Utility for [Docker][1]
 
-Introductory blog post - https://ramitsurana.github.io/myblog/docker%20containers/introducing-turbo-for-docker
+Introductory blog post - http://ramitsurana.github.io/turbo
 
-**Code Quality** 
  [![codebeat badge](https://codebeat.co/badges/e7fce2e3-69e8-451e-b9ba-de3d39b1da28)](https://codebeat.co/projects/github-com-ramitsurana-turbo)
-
-**Documentation**
  [![GoDoc](https://godoc.org/github.com/ramitsurana/turbo?status.svg)](https://godoc.org/github.com/ramitsurana/turbo)
-
-**Tests**
  [![Build Status](https://travis-ci.org/ramitsurana/turbo.svg?branch=master)](https://travis-ci.org/ramitsurana/turbo)
  [![Build Status](https://drone.io/github.com/ramitsurana/turbo/status.png)](https://drone.io/github.com/ramitsurana/turbo/latest)
  [![Build Status](https://semaphoreci.com/api/v1/ramitsurana/turbo/branches/master/badge.svg)](https://semaphoreci.com/ramitsurana/turbo)
@@ -103,7 +98,6 @@ Use "Turbo [command] --help" for more information about a command.
 
 *Not in Aphabetical Order*
 
-* [Api](#api)
 * [Backup](#backup) - Backups all your stuff so that you can have a copy in case anything goes wrong.
 * [Clean](#clean) - Wipes of all your [docker][1] images from your system.
 * [Destroy](#destroy) - Kills all of your exited containers.
@@ -127,7 +121,7 @@ Use "Turbo [command] --help" for more information about a command.
 ## Contributing
 
 Contributions can be made easily by making PR's and opening issues on the github repo.
-Big Thank you to all the [contributors][3] for your awesome contributions !
+Thank you to all the [contributors][3] for your awesome contributions !
 
 ## License
 
