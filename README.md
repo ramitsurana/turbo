@@ -57,7 +57,7 @@ Checkout [releases](https://github.com/ramitsurana/turbo/releases) for proper in
 
 ````
 $ curl -L https://github.com/ramitsurana/turbo/archive/v0.2.tar.gz | tar zx
-$ cd turbov0.2 
+$ cd turbo-0.2 
 $ chmod +x turbo
 $ sudo mv turbo /usr/local/bin
 $ turbo
